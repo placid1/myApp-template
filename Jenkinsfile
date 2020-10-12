@@ -1,9 +1,8 @@
 pipeline {
-    agent {
-    	docker {
-        		image 'dejan/wkhtmltopdf'
-        		label 'my-defined-label'
-    		}
+	agent {
+		node {
+			label 'ubuntu'
+		}
 	}
 	options {
     		skipDefaultCheckout true
