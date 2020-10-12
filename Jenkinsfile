@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent { node { label 'ec2' } }
 	options {
     		skipDefaultCheckout true
   	}
