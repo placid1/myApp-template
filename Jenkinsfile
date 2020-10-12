@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent 'Ubuntu agent'
 	options {
     		skipDefaultCheckout true
   	}
