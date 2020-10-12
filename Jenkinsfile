@@ -7,11 +7,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'pwd'
-		sh 'echo $USER'
-		sh '''
-                    cd /home/placid/Desktop
-			mkdir -p dejan
-                '''
+		sh 'git clone https://github.com/placid1/myApp-template.git'
             }
         }
     }
