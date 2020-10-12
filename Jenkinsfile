@@ -1,9 +1,5 @@
 pipeline {
-	agent {
-		node {
-			label 'ubuntu'
-		}
-	}
+	agent any
 	options {
     		skipDefaultCheckout true
   	}
@@ -11,6 +7,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'pwd'
+		sh 'cd /temp'
 		sh 'git clone https://github.com/placid1/myApp-template.git'
             }
         }
