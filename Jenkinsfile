@@ -1,5 +1,10 @@
 pipeline {
-    agent 'Ubuntu agent'
+    agent {
+    	docker {
+        		image 'dejan/wkhtmltopdf'
+        		label 'my-defined-label'
+    		}
+	}
 	options {
     		skipDefaultCheckout true
   	}
